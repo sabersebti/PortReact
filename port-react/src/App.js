@@ -9,7 +9,9 @@ import Contact from './components/pages/Contact';
 function App() {
   return (
     <Router>
-      <div>
+      {/* Wrap all of your JSX in a fragment to avoid extra DOM element */}
+      <>
+        {/* Call the NavTabs component */}
         <NavTabs />
         {/* Wrap Route elements in a Routes component */}
         <Routes basename="portReact">
@@ -21,10 +23,9 @@ function App() {
           {/* Define a route that will have descendant routes */}
           <Route path="/portReact/contact/*" element={<Contact />} />
         </Routes>
-      </div>
+      </>
     </Router>
   );
 }
-
+/* Export the component */
 export default App;
-
